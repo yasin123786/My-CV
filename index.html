@@ -1,0 +1,116 @@
+<html lang="en">
+
+  <head>
+      <meta charset="UTF-8" />
+      <meta name ="viewport" content="width = device-width, initial-scale = 1" >
+      <title>REHAN BHATTI</title>
+      <link rel="stylesheet" href="./css/index.css">
+  </head>
+     
+<body> 
+    <div class="background gradient">
+    </div>
+    <div class="page">
+        <header>
+            <nav>
+                <a href="#about" class="selected" id='getAbout'>
+                    <span class="link">About</span>
+                </a>
+                <a href="#resume" id='getResume'>
+                    <span class="link">Contact</span>
+                </a>
+            </nav>
+        </header>
+        <main>
+            <section id="presentation" class="profile">
+                <div class="profile-background"></div>
+                <div>
+                    <div class="profile-image">
+                        <img src="./img/img.png" alt="Ryan Adlard">
+                    </div>
+                    <h1 class="profile-name" id="nombre">Rehan Bhatti</h1>
+                    <h2 class="profile-profession"></h2>
+                    <div class="profile-social" id="profile-social">
+                    </div>
+                </div>
+                <div class="profile-buttons">
+                    <a href="./PROJECTS.html">PROJECTS</a>
+                    <a href="#contact">ABOUT ME <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </section>
+            <section id="about" class="about view">
+                <article class="about-aboutMe">
+                    <h3 class="title">About Me</h3>
+                    <div class="line-left">
+                        <p>I am Rehan Bhatti,13 Years old,live in Lahore.(PUNJAB,PAKISTAN)</p>
+                        <div>
+                            <div>
+                                <span>EDUCATION . . . . </span>Studying in 7th grade
+                            </div>
+                            <div style="color: white;">
+                                <span>EDUCATION . . . . </span>Studying in 7th grade
+                            </div>
+                            <div style="margin-top: 22px;">
+                                <span>ACTIVITY . . . . </span>Online research 
+                            </div>
+                            <div style="color: white;">
+                                <span>ACTIVITY . . . . </span>Online research 
+                            </div>
+                            <p style="margin-top: 22px;">SKILLS . . . . I Have a good grip in HTML,CSS & JAVASCRIPT</p>
+                    </div>
+                    </div>
+            </section>
+            <section id="resume" class="resume" name="">
+                <h3 class="title">Get in Touch</h3>
+              <div class="contact-information line-left">
+                <div>
+                  <span>ADDRESS . . . . </span> Lahore , Pakistan
+                </div>
+                <div>
+                  <span>EMAIL . . . . </span> geoameen@gmail.com
+                </div>  
+                <div>
+                </div>
+              </div>
+            </section>
+        </main>
+    </div>
+<script>
+    // Menu links
+let getAbout = document.getElementById("getAbout");
+let getResume = document.getElementById("getResume");
+
+// Sections
+let about = document.getElementById("about");
+let resume = document.getElementById("resume");
+
+function removeClass() {
+    // Links
+    getAbout.classList.remove('selected');
+    getResume.classList.remove('selected');
+    // Sections
+    about.classList.remove('view');
+    resume.classList.remove('view');
+}
+
+getAbout.addEventListener('click', function (e) {
+    if (window.innerWidth > 1040) {
+        e.preventDefault();
+        removeClass();
+        about.classList.add('view');
+        getAbout.classList.add('selected');
+    }
+
+});
+getResume.addEventListener('click', function (e) {
+    if (window.innerWidth > 1040) {
+        e.preventDefault();
+        removeClass();
+        resume.classList.add('view');
+        getResume.classList.add('selected');
+    }
+})
+</script>
+</body>
+
+</html>
